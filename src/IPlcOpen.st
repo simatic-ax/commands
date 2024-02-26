@@ -5,7 +5,7 @@ NAMESPACE Simatic.Ax.Commands
         END_METHOD
         METHOD Done : BOOL
         END_METHOD
-        METHOD Aborted : BOOL
+        METHOD CommandAborted : BOOL
         END_METHOD
         METHOD Error : BOOL
         END_METHOD
