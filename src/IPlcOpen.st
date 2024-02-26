@@ -1,4 +1,4 @@
-NAMESPACE Simatic.Ax.Json
+NAMESPACE Simatic.Ax.Commands
 
     INTERFACE IPlcOpen
         METHOD Busy : BOOL

@@ -1,6 +1,6 @@
-NAMESPACE Simatic.Ax.Json
+NAMESPACE Simatic.Ax.Commands
 
-    CLASS INTERNAL ABSTRACT Command
+    CLASS ABSTRACT Command
         IMPLEMENTS IPlcOpen
         VAR PRIVATE
             _Done : BOOL;
