@@ -2,9 +2,9 @@ NAMESPACE Simatic.Ax.Commands
 
     CLASS ABSTRACT Command
         IMPLEMENTS IPlcOpen
-        VAR PRIVATE
+        VAR PROTECTED
             _Done : BOOL;
-            _Aborted : BOOL;
+            _CommandAborted : BOOL;
             _Error : BOOL;
             _ErrorID : WORD;           
         END_VAR
@@ -19,9 +19,9 @@ NAMESPACE Simatic.Ax.Commands
             Done := _Done;
         END_METHOD
 
-        METHOD PUBLIC Aborted : BOOL
+        METHOD PUBLIC CommandAborted : BOOL
             THIS.ExecuteIfBusy();
-            Aborted := _Aborted;
+            CommandAborted := _CommandAborted;
         END_METHOD
 
         METHOD PUBLIC ErrorID : WORD
@@ -39,7 +39,7 @@ NAMESPACE Simatic.Ax.Commands
 
         METHOD PROTECTED InitState
             _Done := FALSE;
-            _Aborted := FALSE;
+            _CommandAborted := FALSE;
             _Error := FALSE;
             _ErrorID := word#0;
         END_METHOD
@@ -51,14 +51,14 @@ NAMESPACE Simatic.Ax.Commands
         END_METHOD
 
         METHOD PROTECTED IsBusy : BOOL
-            IsBusy := NOT (_Done OR _Error OR _Aborted);
+            IsBusy := NOT (_Done OR _Error OR _CommandAborted);
         END_METHOD
 
         METHOD PROTECTED SetDone
             _Done := TRUE;
             _Error := FALSE;
             _ErrorID := WORD#0000;
-            _Aborted := FALSE;
+            _CommandAborted := FALSE;
         END_METHOD
 
         METHOD PROTECTED SetError
@@ -68,11 +68,11 @@ NAMESPACE Simatic.Ax.Commands
             _Error := TRUE;
             _ErrorID := ErrorID;
             _Done := FALSE;
-            _Aborted := FALSE;
+            _CommandAborted := FALSE;
         END_METHOD
 
         METHOD PROTECTED SetAborted
-            _Aborted := TRUE;
+            _CommandAborted := TRUE;
             _Error := FALSE;
             _Done := FALSE;
             _ErrorID := WORD#0000;
