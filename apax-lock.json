@@ -6,6 +6,10 @@
   "root": {
     "name": "@simatic-ax/commands",
     "version": "0.0.0-placeholder",
+    "dependencies": {
+      "@simatic-ax/io": "5.0.0",
+      "@ax/system-timer": "6.0.94"
+    },
     "devDependencies": {
       "@ax/sdk": "2311.0.1",
       "@simatic-ax/snippetscollection": "1.0.0"
@@ -40,6 +44,22 @@
       "version": "1.0.0",
       "integrity": "sha512-8BNldIIGZuuLSiMjJxcBmHt7sL7kSlc0dss88BcrfnL/7iXPmHwhlnh4XobcVoOHXaz5f8cbMbXCUrffBIwecQ==",
       "resolved": "https://npm.pkg.github.com/download/@simatic-ax/snippetscollection/1.0.0/60302d7e0da15a914ce0126503398063a42e1917",
+      "dependencies": {}
+    },
+    "@simatic-ax/io": {
+      "name": "@simatic-ax/io",
+      "version": "5.0.0",
+      "integrity": "sha512-ViMOrL+CcDuPjr8Jb64xNDA3z/T5G+T9lwdmouNy0T2KGZN60G/tm6v1OvK/TtfjeFKrJ95YuvpypL3TlM81bw==",
+      "resolved": "https://npm.pkg.github.com/download/@simatic-ax/io/5.0.0/855930c4a6c89ef6a438f7add1b6f1e7936566a9",
+      "dependencies": {
+        "@ax/system-timer": "6.0.94"
+      }
+    },
+    "@ax/system-timer": {
+      "name": "@ax/system-timer",
+      "version": "6.0.94",
+      "integrity": "sha512-z2qQVgSKHt78DJZTgIxoAvZdviUzzZmIC3A5bXoWx3ak4fot7D9sa0bKmKp90kP5JqVnkEbl12zYtrBBEVKmNg==",
+      "resolved": "https://registry.simatic-ax.siemens.io/@ax/system-timer/-/system-timer-6.0.94.tgz",
       "dependencies": {}
     },
     "@ax/axunitst": {
