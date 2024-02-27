@@ -1,7 +1,7 @@
 NAMESPACE Simatic.Ax.Commands
 
     CLASS ABSTRACT Command
-        IMPLEMENTS IPlcOpen
+        IMPLEMENTS itfCommand
         VAR PROTECTED
             _Done : BOOL;
             _CommandAborted : BOOL;

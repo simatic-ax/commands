@@ -2,7 +2,7 @@ NAMESPACE Simatic.Ax.Commands
 
     CLASS ABSTRACT ExecuteCommand
         EXTENDS Command
-        IMPLEMENTS IPlcOpen
+        IMPLEMENTS itfCommand
         METHOD PROTECTED ABSTRACT SetExecute
             VAR_INPUT
                 exec : BOOL;

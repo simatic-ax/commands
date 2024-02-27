@@ -1,6 +1,6 @@
 NAMESPACE Simatic.Ax.Commands
 
-    INTERFACE IPlcOpen
+    INTERFACE itfCommand
         METHOD Busy : BOOL
         END_METHOD
         METHOD Done : BOOL
