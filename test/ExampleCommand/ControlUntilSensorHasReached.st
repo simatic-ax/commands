@@ -3,7 +3,7 @@ USING AxUnit.Assert;
 
 NAMESPACE Simatic.Ax.Actuators
 
-    CLASS ControlUntilSensorHasReached
+    CLASS INTERNAL ControlUntilSensorHasReached
         EXTENDS ExecuteCommand
         VAR PUBLIC
             Feedback : REF_TO BOOL;
