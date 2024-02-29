@@ -1,0 +1,6 @@
+NAMESPACE Simatic.Ax
+
+    INTERFACE itfObject
+    END_INTERFACE
+
+END_NAMESPACE

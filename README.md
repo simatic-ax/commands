@@ -18,13 +18,63 @@ apax add @simatic-ax/commands
 Simatic.Ax.Commands;
 ```
 
-## Classes
+## Object
+
+Base Objects for cyclic calls and initialize method.
+
+```mermaid
+ classDiagram
+      Object <|-- itfObject
+      class itfObject
+      class Object{
+          + RunCyclic
+      }
+```
+
+## Command Interface/Classes
+
+Classes for PlcOpen support
+
+```mermaid
+ classDiagram
+      ExecuteCommand <|-- Command
+      Command <|-- itfCommand
+      class itfCommand
+```
+
+### itfCommand
+
+```iec-st
+NAMESPACE Simatic.Ax.Commands
+
+    INTERFACE itfCommand
+        METHOD Busy : BOOL
+        END_METHOD
+        METHOD Done : BOOL
+        END_METHOD
+        METHOD CommandAborted : BOOL
+        END_METHOD
+        METHOD Error : BOOL
+        END_METHOD
+        METHOD ErrorID : WORD
+        END_METHOD
+    END_INTERFACE
+
+END_NAMESPACE
+```
 
 
 
-## Example
+### Command IMPLEMENTS itfCommand
 
-<please provide a working example>
+Simple PlcOpen Command for enabling commands
+
+
+
+### ExecuteCommand EXTENDS Command
+
+Simple PlcOpenCOmmand for
+
 
 ## Contribution
 
