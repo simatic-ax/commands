@@ -39,7 +39,13 @@ Classes for PlcOpen support
  classDiagram
       ExecuteCommand <|-- Command
       Command <|-- itfCommand
-      class itfCommand
+      class itfCommand{
+        + Busy() BOOL
+        + Done() BOOL
+        + CommandAborted() BOOL
+        + Error() BOOL
+        + ErrorID() WORD
+      }
 ```
 
 ### itfCommand
