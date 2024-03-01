@@ -69,18 +69,13 @@ NAMESPACE Simatic.Ax.Commands
 END_NAMESPACE
 ```
 
-
-
 ### Command IMPLEMENTS itfCommand
 
 Simple PlcOpen Command for enabling commands
 
-
-
 ### ExecuteCommand EXTENDS Command
 
 Simple PlcOpenCOmmand for
-
 
 ## Contribution
 
