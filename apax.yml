@@ -8,7 +8,7 @@ type: lib
 #URL to the repository
 repository:
   type: git
-  url: https://github.com/simatic-ax/@simatic-ax/commands
+  url: https://github.com/simatic-ax/commands
 # Environment variables
 variables:
   APAX_BUILD_ARGS:
