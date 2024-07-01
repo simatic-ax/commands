@@ -3,7 +3,7 @@ name: "@simatic-ax/commands"
 version: 0.0.0-placeholder
 author: Siemens AG
 # Description will be displayed in the apax extension
-description: <add your description here, which will be shown in the apax extension>
+description: This library helps To handle PLC Open Commands easier and in a standardized way
 type: lib
 #URL to the repository
 repository:
@@ -15,9 +15,10 @@ variables:
     - '--debug'
 targets:
   - '1500'
+  - 'llvm'
 # Dependencies
 devDependencies:
-  '@ax/sdk': 2311.0.1
+  '@ax/sdk': 2405.0.0
   "@simatic-ax/snippetscollection": 1.0.0
 # Registry information, where the package will be published
 registries:
@@ -29,8 +30,3 @@ files:
   - 'doc'
   - 'src'
   - 'snippets'
-installStrategy: strict
-apaxVersion: 3.1.0
-dependencies:
-  "@simatic-ax/io": 5.0.0
-  "@ax/system-timer": 6.0.94
