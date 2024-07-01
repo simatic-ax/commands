@@ -15,6 +15,7 @@ variables:
     - '--debug'
 targets:
   - '1500'
+  - 'llvm'
 # Dependencies
 devDependencies:
   '@ax/sdk': 2405.0.0
