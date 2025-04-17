@@ -18,7 +18,7 @@ targets:
   - 'llvm'
 # Dependencies
 devDependencies:
-  '@ax/sdk': 2405.0.0
+  '@ax/sdk': 2411.2.0
   "@simatic-ax/snippetscollection": 1.0.0
 # Registry information, where the package will be published
 registries:
@@ -30,3 +30,5 @@ files:
   - 'doc'
   - 'src'
   - 'snippets'
+catalogs:
+  "@ax/simatic-ax": ^2411.0.0
