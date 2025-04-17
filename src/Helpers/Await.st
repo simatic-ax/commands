@@ -1,5 +1,3 @@
-USING AxUnit.Assert;
-
 NAMESPACE Simatic.Ax.Commands
 
     // Helper function to await the completion of a command and return its state.
