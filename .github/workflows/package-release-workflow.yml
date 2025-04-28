@@ -70,24 +70,3 @@ jobs:
         with:
           registries: |
             https://npm.pkg.github.com
-      
-      - name: Update major version tag
-        if: ${{ success() }}
-        run: |
-          git config --global --add safe.directory "$GITHUB_WORKSPACE"
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            
-          VERSION=${{ github.event.release.tag_name }}
-          if echo "$VERSION" | grep -qE '^[0-9]+\.[0-9]+\.[0-9]+$'; then
-            MAJOR_VERSION="v$(echo $VERSION | cut -d. -f1)"
-            echo "Updating major version tag: $MAJOR_VERSION"
-            git push origin :refs/tags/$MAJOR_VERSION || true
-            git tag -f $MAJOR_VERSION
-            git push origin $MAJOR_VERSION --force
-            echo "✅ Major version tag updated successfully"
-          else
-            echo "❌ Error: Invalid version format: '$VERSION'"
-            echo "Expected format: X.Y.Z (e.g., 1.2.3)"
-            exit 1
-          fi
