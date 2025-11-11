@@ -3,7 +3,7 @@ name: "@simatic-ax/commands"
 version: 0.0.0-placeholder
 author: Siemens AG
 # Description will be displayed in the apax extension
-description: This library helps To handle PLC Open Commands easier and in a standardized way
+description: "Library providing abstract base classes for PLCOpen command handling in object-oriented programming"
 type: lib
 #URL to the repository
 repository:
