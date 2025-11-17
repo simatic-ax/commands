@@ -8,7 +8,7 @@
     "version": "0.0.0-placeholder",
     "devDependencies": {
       "@ax/sdk": "^2510.0.0",
-      "@simatic-ax/snippetscollection": "^1.0.0"
+      "@simatic-ax/snippetscollection": "^1.1.0"
     },
     "catalogs": {
       "@ax/simatic-ax": "^2510.0.0"
