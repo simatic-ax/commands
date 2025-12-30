@@ -71,3 +71,17 @@ jobs:
         with:
           registries: |
             https://npm.pkg.github.com
+      
+      - name: Collect Logs
+        if: failure()
+        uses: simatic-ax/actions/apax-collect-logs@feat/collect_logs
+        with: 
+          log_source_dir: "/github/home/.apax/logs/"
+          log_dest_dir: "/github/workspace/apax-logs/"
+      
+      - name: Upload Collected Logs as Artifact
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+            name: upload log files
+            path: /github/workspace/apax-logs/
