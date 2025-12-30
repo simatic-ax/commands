@@ -78,5 +78,10 @@ jobs:
         with: 
           log_source_dir: "/github/home/.apax/logs/"
           log_dest_dir: "/github/workspace/apax-logs/"
-          path: /github/workspace/apax-logs/
-        
+      
+      - name: Upload Collected Logs as Artifact
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+            name: upload log files
+            path: /github/workspace/apax-logs/
