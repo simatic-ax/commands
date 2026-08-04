@@ -34,7 +34,7 @@ jobs:
         password: ${{ secrets.GITHUB_TOKEN }}
     steps: 
       - name: Checkout Code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           ref: ${{ github.event.release.target_commitish }}
           fetch-depth: 0
@@ -43,7 +43,7 @@ jobs:
         run: mkdir -p bin
         
       - name: Download build artifacts
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: build-artifacts
           path: bin
@@ -81,7 +81,7 @@ jobs:
       
       - name: Upload Collected Logs as Artifact
         if: failure()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
             name: upload log files
             path: /github/workspace/apax-logs/
