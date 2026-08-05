@@ -31,4 +31,4 @@ files:
   - 'bin'
   - 'snippets'
 catalogs:
-  "@ax/simatic-ax": ^2504.0.0
+  "@ax/simatic-ax": ^2510.0.0
