@@ -5,3 +5,4 @@ obj
 testresult
 ./apax-lock.json
 /.vs
+out/
